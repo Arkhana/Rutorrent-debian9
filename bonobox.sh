@@ -464,7 +464,7 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 	echo ""; set "152" "134"; FONCTXT "$1" "$2"; echo -e "${CBLUE}$TXT1${CEND}${CGREEN}$TXT2${CEND}"; echo ""
 
 	# configuration ssl
-	openssl req -new -x509 -days 3658 -nodes -newkey rsa:2048 -out "$NGINXSSL"/server.crt -keyout "$NGINXSSL"/server.key <<- EOF
+	openssl req -new -x509 -days 3658 -nodes -newkey rsa:4096 -out "$NGINXSSL"/server.crt -keyout "$NGINXSSL"/server.key <<- EOF
 		KP
 		North Korea
 		Pyongyang
@@ -492,10 +492,6 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 
 	# configuration .rtorrent.rc
 	FONCTORRENTRC "$USER" "$PORT" "$RUTORRENT"
-
-	# torrent welcome
-	cp -f "$FILES"/rutorrent/Welcome.To.Bonobox.nfo /home/"$USER"/torrents/Welcome.To.Bonobox.nfo
-	cp -f "$FILES"/rutorrent/Welcome.To.Bonobox.torrent /home/"$USER"/watch/Welcome.To.Bonobox.torrent
 
 	# permissions
 	chown -R "$USER":"$USER" /home/"$USER"
