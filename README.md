@@ -29,9 +29,12 @@ git clone https://github.com/exrat/rutorrent-bonobox
 cd rutorrent-bonobox
 chmod a+x bonobox.sh && ./bonobox.sh
 ```
+les fichiers welcome nfo et le point torrent ont été supprimés
+le script bonobox.sh néttoyé
+
 ![caps1](https://raw.github.com/exrat/rutorrent-bonobox/master/files/caps_script01.png)
 
-**Vous pouvez aussi forcer la langue de votre choix:**
+**Installation en Français de base:**
 ```
 # Français
 chmod a+x bonobox.sh && ./bonobox.sh --fr
