@@ -464,7 +464,7 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 	echo ""; set "152" "134"; FONCTXT "$1" "$2"; echo -e "${CBLUE}$TXT1${CEND}${CGREEN}$TXT2${CEND}"; echo ""
 
 	# configuration ssl
-	openssl req -new -x509 -days 3658 -nodes -newkey rsa:4096 -out "$NGINXSSL"/server.crt -keyout "$NGINXSSL"/server.key <<- EOF
+	openssl req -new -x509 -days 3658 -nodes -sha512 -newkey rsa:4096 -out "$NGINXSSL"/server.crt -keyout "$NGINXSSL"/server.key <<- EOF
 		KP
 		North Korea
 		Pyongyang
